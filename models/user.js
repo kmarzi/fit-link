@@ -3,7 +3,12 @@ const bcrypt = require("bcryptjs");
 // Creating our User model
 module.exports = function(sequelize, DataTypes) {
   const User = sequelize.define("User", {
-    // The email cannot be null, and must be a proper email before creation
+    userName: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      unique: true,
+      len: [3, 15]
+    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -12,12 +17,20 @@ module.exports = function(sequelize, DataTypes) {
         isEmail: true
       }
     },
-    // The password cannot be null
     password: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    activity: {
+      type: DataTypes.STRING
     }
   });
+  User.associate = function(models) {
+    User.hasMany(models.LinkUp, {
+      // name: organizerID,
+      onDelete: "cascade"
+    });
+  };
   // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
   User.prototype.validPassword = function(password) {
     return bcrypt.compareSync(password, this.password);

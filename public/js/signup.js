@@ -1,22 +1,25 @@
 $(document).ready(() => {
   // Getting references to our form and input
   const signUpForm = $("form.signup");
-  const emailInput = $("input#email-input");
-  const passwordInput = $("input#password-input");
+  const userName = $("#userName-input");
+  const emailInput = $("#email-input");
+  const passwordInput = $("#password-input");
 
   // When the signup button is clicked, we validate the email and password are not blank
   signUpForm.on("submit", event => {
     event.preventDefault();
     const userData = {
+      userName: usernameInput.val().trim(),
       email: emailInput.val().trim(),
       password: passwordInput.val().trim()
     };
 
-    if (!userData.email || !userData.password) {
+    if (!userData.userName || !userData.email || !userData.password) {
       return;
     }
-    // If we have an email and password, run the signUpUser function
+    // If we have an email and password, run the signUpUser function userData.userName, 
     signUpUser(userData.email, userData.password);
+    userName("")
     emailInput.val("");
     passwordInput.val("");
   });
@@ -25,6 +28,7 @@ $(document).ready(() => {
   // Otherwise we log any errors
   function signUpUser(email, password) {
     $.post("/api/signup", {
+      userName: userName,
       email: email,
       password: password
     })
@@ -36,9 +40,14 @@ $(document).ready(() => {
   }
 
   function handleLoginErr(err) {
+<<<<<<< HEAD
     // $("#alert .msg").text(JSON.stringify(err.responseJSON));
     // $("#alert .msg").text;
     console.log(err.responseJSON);
+=======
+    // $("#alert .msg").text(JSON.stringify(err.responseJSON))
+    console.log(err.respsonse);
+>>>>>>> 80157e373857afb9ac199aa8bbaaa24ec3482e62
     $("#alert").fadeIn(500);
   }
 });

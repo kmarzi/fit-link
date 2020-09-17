@@ -1,7 +1,11 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "rootroot",
+=======
+    "password": "love",
+>>>>>>> 80157e373857afb9ac199aa8bbaaa24ec3482e62
     "database": "fitLink",
     "host": "127.0.0.1",
     "dialect": "mysql"
