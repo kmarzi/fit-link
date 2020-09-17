@@ -47,14 +47,14 @@ form.login {
   align-items: center;
   padding: 10px; */
 /* } */
-body {
-  background-image: url("https://images.unsplash.com/photo-1536514498073-50e69d39c6cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60");
+.welcome {
+  background-image: url("https://images.unsplash.com/photo-1561579890-3ace74d8e378?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60");
   background-position:right;
   background-repeat: no-repeat;
   background-size:  cover;
-  background-color: #cccccc;
+  /* background-color: #cccccc; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: white;
+  /* color: white; */
   height: 100%;
  }
 
