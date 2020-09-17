@@ -5,84 +5,145 @@
   <title>View Events</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCT5AesaYHIpAIlJ2oFzFoLsEYanCgaCt0&callback=initMap"
+    defer></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.5.2/lumen/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
   <link href="stylesheets/style.css" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="homepage.html">fitLink</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <!-- <a class="nav-item nav-link" href="homepage.html">Home</a><span
-                            class="sr-only">(current)</span></a> -->
-                        <a class="nav-item nav-link" href="login.html">Login</a>
-                        <a class="nav-item nav-link" href="signup.html">Sign Up</a>
-                        <a class="nav-item nav-link" href="viewEvents.html">View Events</a>
-                        <a class="nav-item nav-link" href="createEvents.html">Create an Event</a>
-                    </div>
-                </div>
-            </nav>
+      <div class="navbar-nav">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="homepage.html">Home</a><span
+                            class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="login.html">Login</a>
+            <a class="nav-item nav-link" href="signup.html">Sign Up</a>
+            <a class="nav-item nav-link" href="viewEvents.html">View Events</a>
+            <a class="nav-item nav-link" href="createEvents.html">Create an Event</a>
+          </div>
         </div>
-    </div>
-</nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h1>Welcome<span class="member-name"></span></h1>
+  </nav> -->
+  <div class="wrapper">
+    <div class="sidebar">
+      <h2 class="ml-3">fitLink</h2>
+      <ul class="text-left">
+        <li><a href="#"><i class="far fa-address-book"></i> Profile</a></li>
+        <li><a href="#"><i class="far fa-calendar-plus"></i> Create Event</a></li>
+        <li><a href="#"><i class="fas fa-map-pin"></i> Map</a></li>
+      </ul>
+      <div class="logout">
+        <ul class="text-left">
+        <li><a href="#"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+      </ul>
       </div>
     </div>
   </div>
 
+  <!-- <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1>Welcome<span class="member-name"></span></h1>
+      </div>
+    </div>
+  </div> -->
 
-<!--add events to page and add interested button under each event-->
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-  <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Soccer</a>
+
+  <!--add events to page and add interested button under each event-->
+  <div class="container">
+    <div class="row">
+      <div class="col-9 ml-5">
+        <h1>Welcome<span class="member-name"></span></h1>
+      </div>
+    </div>
+    <!-- activities -->
+    <div class="row ml-5 mb-3" style="width: 90%;">
+      <div class="card col-3 ml-4" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#" class="btn btn-primary">Yoga</a>
+        </div>
+      </div>
+      <div class="card col-3 ml-4" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#" class="btn btn-primary">HIIT</a>
+        </div>
+      </div>
+      <div class="card col-3 ml-4" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#" class="btn btn-primary">Running</a>
+        </div>
+      </div>
+    </div>
+    <div class="row ml-5 mb-3" style="width: 90%;">
+      <div class="card col-3 ml-4" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#" class="btn btn-primary">Soccer</a>
+        </div>
+      </div>
+      <div class="card col-3 ml-4" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#" class="btn btn-primary">Basketball</a>
+        </div>
+      </div>
+      <div class="card col-3 ml-4" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#" class="btn btn-primary">Biking</a>
+        </div>
+      </div>
+    </div>
+    <!-- map -->
+    <div class="row mt-3 ml-5" style="90%">
+      <div class="col-1"></div>
+      <div class="col-9" id="map"></div>
+
     </div>
   </div>
-  <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Basketball</a>
-    </div>
-  </div>
-  <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Biking</a>
-    </div>
-  </div>
-</div>
 
 
-
-<!--add on click later-->
-<!-- <button type="button" class="btn btn-primary">
+  <!--add on click later-->
+  <!-- <button type="button" class="btn btn-primary">
   Interested<span class="badge badge-light">4</span>
  </button> -->
 
- <!--map shows markers of all events, when user clicks a marker of the specific category events will display-->
-
+  <!--map shows markers of all events, when user clicks a marker of the specific category events will display-->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCT5AesaYHIpAIlJ2oFzFoLsEYanCgaCt0&callback=initMap"
+  type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/members.js"></script>
-
-</body>
+<script src="./js/map.js"></script></body>
 
 </html>
