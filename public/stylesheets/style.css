@@ -1,3 +1,12 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
 form.signup,
 form.login {
   margin-top: 50px;
@@ -39,11 +48,58 @@ form.login {
   padding: 10px; */
 /* } */
 section {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTIMG7bWOQ8v9WH8Tx91y2m9OOtTjzkS6Kh8g&usqp=CAU");
+  background-image: url("https://images.unsplash.com/photo-1561579890-3ace74d8e378?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
   background-position:right;
   background-repeat: no-repeat;
   background-size:  cover;
   background-color: #cccccc;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
+  height: 100%;
  }
+
+ .wrapper{
+   display:flex;
+   position: relative;
+   text-decoration: none;
+ }
+
+ .wrapper .sidebar{
+   position: fixed;
+   width: 200px;
+   height: 100%;
+   background: #2832c2;
+   padding: 30px 0;
+ }
+
+ .wrapper .sidebar ul li{
+  list-style-type: none;
+  padding: 15px;
+  width: -20px;
+  font-size: 20px;
+ }
+ .wrapper .sidebar h2{
+  color: white;
+ }
+
+ .wrapper .sidebar .far{
+  color: white;
+  font-size: 28px;
+ }
+ .wrapper .sidebar .fas{
+  color: white;
+  font-size: 28px;
+ }
+ .wrapper .sidebar .logout{
+  color: white;
+  font-size: 20px;
+  width: 5px;
+  /* line-height: 40px; */
+  margin-top: 400px;
+ }
+
+ #map {
+  height: 300px;
+  width:  500%;
+}
+
