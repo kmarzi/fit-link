@@ -10,9 +10,15 @@ module.exports = function(app) {
     if (req.user) {
       res.redirect("/viewEvents");
     }
+    res.sendFile(path.join(__dirname, "../public/welcome.html"));
+  });
+  app.get("/signup", (req, res) => {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      res.redirect("/viewEvents");
+    }
     res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
-
   app.get("/login", (req, res) => {
     // If the user already has an account send them to the members page
     if (req.user) {
