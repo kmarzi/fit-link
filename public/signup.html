@@ -10,18 +10,18 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="homepage.html">fitLink</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <!-- <a class="nav-item nav-link" href="homepage.html">Home</a><span
-                            class="sr-only">(current)</span></a> -->
+                        <a class="nav-item nav-link" href="homepage.html">Home</a><span
+                            class="sr-only">(current)</span></a>
                         <a class="nav-item nav-link" href="login.html">Login</a>
                         <a class="nav-item nav-link" href="signup.html">Sign Up</a>
                         <a class="nav-item nav-link" href="viewEvents.html">View Events</a>
@@ -31,16 +31,29 @@
             </nav>
         </div>
     </div>
-</nav>
+</nav> -->
+  <div class="wrapper">
+    <div class="sidebar">
+      <h2 class="ml-3">fitLink</h2>
+      <ul class="text-left">
+        <li><a href="#"><i class="far fa-address-book"></i> Profile</a></li>
+        <li><a href="#"><i class="far fa-calendar-plus"></i> Create LinkUp</a></li>
+      </ul>
+      <div class="logout">
+        <ul class="text-left">
+          <li><a href="#"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-  
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <h2>Sign Up Form</h2>
         <form class="signup">
           <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
+            <label for="exampleInputEmail1">Email</label>
             <input type="email" class="form-control" id="email-input" placeholder="Email">
           </div>
           <div class="form-group">
@@ -54,10 +67,15 @@
           <div style="display: none" id="alert" class="alert alert-danger" role="alert">
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <span class="sr-only">Error:</span>Email already in use<span class="msg"></span>
 =======
             <span class="sr-only">Error:</span>Email already in use. Please use a unique email or<p>OR <a href="/login">login</a><span class="msg"></span>
 >>>>>>> 80157e373857afb9ac199aa8bbaaa24ec3482e62
+=======
+            <span class="sr-only">Error:</span>Email already in use. Please use a unique email or<p>OR <a
+                href="/login">login</a><span class="msg"></span>
+>>>>>>> 0970a4c1d584671d14dd080c05e9333a2dd767bb
           </div>
           <button type="submit" class="btn btn-default">Sign Up</button>
         </form>

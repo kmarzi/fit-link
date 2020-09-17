@@ -7,10 +7,15 @@
   font-family: 'Josefin Sans', sans-serif;
 }
 
-form.signup,
+form.signup
 form.login {
-  margin-top: 50px;
+  margin-top:50px;
+
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0970a4c1d584671d14dd080c05e9333a2dd767bb
 
 <<<<<<< HEAD
 /* body {
@@ -45,20 +50,28 @@ main {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
  }
-
-/* 
-#container2 {
-  align-items: center;
-  padding: 10px; */
-/* } */
-section {
-  background-image: url("https://images.unsplash.com/photo-1561579890-3ace74d8e378?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
+ #signupPage {
+  background-image: url("https://us.123rf.com/450wm/dolgachov/dolgachov1511/dolgachov151102303/47960487-fitness-sport-friendship-and-healthy-lifestyle-concept-group-of-happy-teenage-friends-jumping-high-o.jpg?ver=6");
   background-position:right;
   background-repeat: no-repeat;
   background-size:  cover;
   background-color: #cccccc;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
+ }
+/* 
+#container2 {
+  align-items: center;
+  padding: 10px; */
+/* } */
+.welcome {
+  background-image: url("https://images.unsplash.com/photo-1561579890-3ace74d8e378?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60");
+  background-position:right;
+  background-repeat: no-repeat;
+  background-size:  cover;
+  /* background-color: #cccccc; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* color: white; */
   height: 100%;
  }
 
@@ -72,7 +85,7 @@ section {
    position: fixed;
    width: 200px;
    height: 100%;
-   background: #2832c2;
+   background:rgbgit a(0, 128, 126, 0.338);
    padding: 30px 0;
  }
 
