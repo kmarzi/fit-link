@@ -2,70 +2,92 @@
 <html lang="en">
 
 <head>
-    <title>Login</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.5.2/lumen/bootstrap.min.css">
-    <link href="stylesheets/style.css" rel="stylesheet">
+  <title>Create LinkUp</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.5.2/lumen/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <link href="stylesheets/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="homepage.html">fitLink</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
-              <a class="nav-item nav-link" href="login.html">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-item nav-link" href="signup.html">Sign Up</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-item nav-link" href="viewEvents.html">View Events</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-item nav-link" href="createEvents.html">Create an Event</a>
-            </li>
+  <div class="row">
+    <div class="col-1">
+      <div class="wrapper">
+        <div class="sidebar">
+          <h2 class="ml-3">fitLink</h2>
+          <ul class="text-left">
+            <li><a href="#"><i class="far fa-address-book"></i> Profile</a></li>
+            <li><a href="#"><i class="far fa-calendar-plus"></i> Create LinkUp</a></li>
           </ul>
+          <div class="logout">
+            <ul class="text-left">
+              <li><a href="#"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+            </ul>
+          </div>
         </div>
-      </nav>
-     <!--category dropdown box-->
-    <div class="form-group">
-        <select class="custom-select" id="category">
-          <option selected value="">All Categories</option>
-          <option value="Yoga">Yoga</option>
-          <option value="Pilates">Pilates</option>
-          <option value="HIIT">HIIT</option>
-          <option value="Biking">Biking</option>
-          <option value="Running">Running</option>
-          <option value="Walking">Walking</option>
-          <option value="Soocer">Soccer</option>
-          <option value="Basketball">Basketball</option>
-          <option value="Kickball">Kickball</option>
-          <option value="Dodgeball">Dodgeball</option>
-          <option value="Football">Football</option>
-        </select>
       </div>
-
-    <div class="form-group">
-        <label for="createActivity">Create an Event</label>
-        <input type="password" class="form-control" id="password-input" placeholder="Create an Event">
     </div>
-    <button type="submit" class="btn btn-default">Post</button>
-    </form>
-    <br/>
+    <div class="col-1"></div>
+    <!--category dropdown box-->
+    <div class="col-6 mt-3 ml-3">
+      <div class="container">
+        <div class="form-group">
+          <select class="custom-select" id="category">
+            <option selected value="">All Categories</option>
+            <option value="Yoga">Yoga</option>
+            <option value="Pilates">Pilates</option>
+            <option value="HIIT">HIIT</option>
+            <option value="Biking">Biking</option>
+            <option value="Running">Running</option>
+            <option value="Walking">Walking</option>
+            <option value="Soocer">Soccer</option>
+            <option value="Basketball">Basketball</option>
+            <option value="Kickball">Kickball</option>
+            <option value="Dodgeball">Dodgeball</option>
+            <option value="Football">Football</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">LinkUp Name</label>
+          <input class="form-control" type="text" placeholder="Default input">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Street Address</label>
+          <input class="form-control" type="text" placeholder="Street Address">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">City</label>
+          <input class="form-control" type="text" placeholder="City">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">State</label>
+          <input class="form-control" type="text" placeholder="State">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Zip Code</label>
+          <input class="form-control" type="text" placeholder="Zip Code">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Date</label>
+          <input class="form-control" type="text" placeholder="Date">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Start Time</label>
+          <input class="form-control" type="text" placeholder="Default input">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">End Time</label>
+          <input class="form-control" type="text" placeholder="Default input">
+        </div>
+        <button type="submit" class="btn btn-primary">Post</button>
+        </form>
+      </div>
     </div>
-    </div>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/login.js"></script>
-    </div>
+  </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
 
 </html>
