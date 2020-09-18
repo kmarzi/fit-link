@@ -1,3 +1,5 @@
+const 
+
 $(document).ready(() => {
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
@@ -5,3 +7,4 @@ $(document).ready(() => {
     $(".member-name").text(data.email);
   });
 });
+
