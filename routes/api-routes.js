@@ -24,20 +24,45 @@ module.exports = function(app) {
   });
 
   app.post("/api/linkup", (req, res) => {
-    const { name, street, city, state, zipCode, linkUpDate, startTime, endTime, category } = req.body;
-    req.body.UserId = req.user.id
+    const {
+      name,
+      street,
+      city,
+      state,
+      zipCode,
+      linkUpDate,
+      startTime,
+      endTime,
+      category
+    } = req.body;
+    req.body.UserId = req.user.id;
     db.LinkUp.create(req.body)
       .then(newLinkup => {
-        console.log('newLINKUP---->', newLinkup);
-       // res.redirect(307, "/viewEvents");
+        console.log("newLINKUP---->", newLinkup);
+        // res.redirect(307, "/viewEvents");
         res.sendStatus(200);
       })
       .catch(err => {
-        console.log(err)
+        console.log(err);
         res.status(400).json(err);
       });
   });
 
+  app.get("/api/linkup/all", function(req, res) {
+    db.LinkUp.findAll({}).then(function(results) {
+      res.json(results);
+    });
+
+    app.get("/api/linkup/:category", function(req, res) {
+      db.LinkUp.findAll({
+        where: {
+          category: req.params.category
+        }
+      }).then(function(dbPost) {
+        res.json(dbPost);
+      });
+    });
+  });
   app.get("/logout", (req, res) => {
     req.logout();
     res.redirect("/");
