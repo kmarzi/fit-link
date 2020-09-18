@@ -48,7 +48,7 @@ form.login {
   padding: 10px; */
 /* } */
 .welcome {
-  background-image: url("https://images.unsplash.com/photo-1561579890-3ace74d8e378?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60");
+  background-image: url("https://images.unsplash.com/photo-1571103189706-cd54b23e81f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80");
   background-position:right;
   background-repeat: no-repeat;
   background-size:  cover;
@@ -79,9 +79,10 @@ form.login {
 
  .wrapper .sidebar{
    position: fixed;
-   width: 200px;
+   width: 15%;
+   min-width: 100px;
    height: 100%;
-   background: #3b6978;
+   background: #385a7c;
    padding: 30px 0;
  }
 
@@ -92,7 +93,8 @@ form.login {
   font-size: 20px;
  }
  .wrapper .sidebar h2{
-  color: white;
+  color: #f97171;
+  font-size: 36px;
  }
 
  .wrapper .sidebar .far{
@@ -111,5 +113,8 @@ form.login {
   margin-top: 400px;
  }
 
+ .card{
+   min-width: 175px;
+ }
 
 
