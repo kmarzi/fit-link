@@ -1,0 +1,17 @@
+#map {
+    height: 300px;
+    width:  500%;
+  }
+
+  .listing {
+    /* width: 33.3333%; */
+  }
+  
+  .map {
+    border-left: 1px solid #fff;
+    position: absolute;
+    /* left: 33.3333%;
+    width: 66.6666%;
+    top: 0;
+    bottom: 0; */
+  }
