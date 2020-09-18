@@ -13,7 +13,6 @@ form.login {
 
 }
 
-
 .loginPage {
   background-image: url("https://www.biddingforgood.com/orgs/LEFauction/207100190/boot-camp.jpg");
   background-position:right;
@@ -42,21 +41,26 @@ form.login {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
  }
-/* 
-#container2 {
-  align-items: center;
-  padding: 10px; */
-/* } */
+ #fitcolor{
+   color: #f97171;
+ }
+#jumbotron {
+  opacity: 0.7;
+}
+
 .welcome {
   background-image: url("https://images.unsplash.com/photo-1571103189706-cd54b23e81f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80");
   background-position:right;
   background-repeat: no-repeat;
   background-size:  cover;
   background-color: #FAFAFA;
-  font-family: font-family: 'Raleway', sans-serif;
+  font-family:'Raleway', sans-serif;
   /* color: white; */
   height: 100%;
  }
+body {
+  font-family: 'Raleway', sans-serif;
+}
 
  .wrapper{
    display:flex;
