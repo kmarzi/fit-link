@@ -63,12 +63,20 @@ form.login {
    position: relative;
    text-decoration: none;
  }
+ 
+ .createPage {
+  background-color: 1d4d4f;
+ }
+
+ #viewPage {
+   background-color: 1d4d4f;
+ }
 
  .wrapper .sidebar{
    position: fixed;
    width: 200px;
    height: 100%;
-   background:#B0BEC5;
+   background: #3b6978;
    padding: 30px 0;
  }
 
