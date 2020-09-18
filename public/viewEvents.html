@@ -50,13 +50,14 @@
             <div class="card-body">
               <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
             content.</p> -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-              Yoga
-            </button>
+              <button id="click-me" value="Yoga in the Park" type="button" class="btn btn-primary" data-toggle="modal"
+                data-target="#exampleModal">
+                Yoga
+              </button>
               <!-- <a href="#" class="btn btn-primary align-center">Yoga</a> -->
             </div>
           </div>
-          <div class="card col-3 ml-4" style="width: 18rem;">
+          <div class="card col-3 ml-4" style="width:18 rem">
             <h5 class="card-title">HIIT with or without Equipment</h5>
             <img src="stylesheets/images/weight.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
@@ -120,36 +121,54 @@
   <!-- <button type="button" class="btn btn-primary">
   Interested<span class="badge badge-light">4</span>
  </button> -->
- <!-- Button trigger modal -->
+  <!-- Button trigger modal -->
 
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <ul id="ol"></ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
   <!--map shows markers of all events, when user clicks a marker of the specific category events will display-->
   <!-- <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCT5AesaYHIpAIlJ2oFzFoLsEYanCgaCt0&callback=initMap"
     type="text/javascript"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/viewEvents.js"></script>
   <script src="./js/map.js"></script>
+  <script>
+    // var currentEventTarget = event.currentTarget.value  
+    var activity = []
+    for (var i = 1; i <= 50; i++) {
+      activity.push("activity " + i)
+    }
+    $(document).ready(function () {
+      $("#click-me").on("click", function () {
+        $("#exampleModalLabel").text(event.currentTarget.value);
+        console.log(event.currentTarget.value);
+      });
+    });
+    $.each(activity, function (i, item) {
+      $("#ol").append("<li>" + item + "</li>");
+    });
+  </script>
 </body>
 
 </html>
