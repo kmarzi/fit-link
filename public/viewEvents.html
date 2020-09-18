@@ -5,9 +5,11 @@
   <title>View Events</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCT5AesaYHIpAIlJ2oFzFoLsEYanCgaCt0&callback=initMap"
-    defer></script>
+    defer></script> -->
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.5.2/lumen/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
     integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
@@ -22,7 +24,7 @@
           <h2 class="ml-3">fitLink</h2>
           <ul class="text-left">
             <li><a href="#"><i class="far fa-address-book"></i> Profile</a></li>
-            <li><a href="#"><i class="far fa-calendar-plus"></i> Create LinkUp</a></li>
+            <li><a href="/linkup"><i class="far fa-calendar-plus"></i> +LinkUp</a></li>
           </ul>
           <div class="logout">
             <ul class="text-left">
@@ -37,7 +39,7 @@
       <div class="container">
         <div class="row">
           <div class="col-9 ml-5">
-            <h1>Welcome<span class="member-name"></span></h1>
+            <h1>Welcome, <span class="member-name"></span></h1>
           </div>
         </div>
         <!-- activities -->
@@ -102,7 +104,8 @@
         <!-- map -->
         <div class="row mt-3 ml-5" style="width: 90%">
           <div class="col-1"></div>
-          <div class="col-9" id="map"></div>
+          <div class="col-1 listing pad2">Listing</div>
+          <div id="map" class=" col-6 map pad2" style="height: 300px;">Map</div>
 
         </div>
       </div>
@@ -116,11 +119,11 @@
  </button> -->
 
   <!--map shows markers of all events, when user clicks a marker of the specific category events will display-->
-  <script async defer
+  <!-- <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCT5AesaYHIpAIlJ2oFzFoLsEYanCgaCt0&callback=initMap"
-    type="text/javascript"></script>
+    type="text/javascript"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/members.js"></script>
+  <script type="text/javascript" src="js/viewEvents.js"></script>
   <script src="./js/map.js"></script>
 </body>
 </body>
