@@ -72,6 +72,11 @@ form.login {
    background-color: 1d4d4f;
  }
 
+ .evite {
+   text-align: left;
+   font-family: Arial, Helvetica, sans-serif;
+ }
+
  .wrapper .sidebar{
    position: fixed;
    width: 200px;
