@@ -8,3 +8,9 @@ $(document).ready(() => {
   });
 });
 
+$(document).ready(function () {
+  $(".activity").on("click", function () {
+    $("#exampleModalLabel").text(currentTarget.value);
+    console.log(currentTarget.value);
+  });
+});
