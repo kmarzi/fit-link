@@ -5,18 +5,27 @@
   <title>View Events</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCT5AesaYHIpAIlJ2oFzFoLsEYanCgaCt0&callback=initMap"
-    defer></script> -->
   <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
   <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.5.2/lumen/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
     integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
   <link href="stylesheets/style.css" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+  integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+  crossorigin="anonymous"></script>
+
 </head>
 
 <body>
+  <div id="viewPage">
   <div class="row">
     <div class="col-1">
       <div class="wrapper">
@@ -50,16 +59,22 @@
             <div class="card-body">
               <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
             content.</p> -->
-              <a href="#" class="btn btn-primary align-center">Yoga</a>
+              <button class="btn btn-primary align-center activity" value="Yoga in the Park" type="button" 
+                data-toggle="modal" data-target="#exampleModal">
+                Yoga
+              </button>
             </div>
           </div>
-          <div class="card col-3 ml-4" style="width: 18rem;">
+          <div class="card col-3 ml-4" style="width:18 rem">
             <h5 class="card-title">HIIT with or without Equipment</h5>
             <img src="stylesheets/images/weight.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
               <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
             content.</p> -->
-              <a href="#" class="btn btn-primary">HIIT</a>
+              <button class="btn btn-primary align-center activity" value="HIIT" type="button" 
+                data-toggle="modal" data-target="#exampleModal">
+                HIIT
+              </button>
             </div>
           </div>
           <div class="card col-3 ml-4" style="width: 18rem;">
@@ -68,64 +83,138 @@
             <div class="card-body">
               <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
             content.</p> -->
-              <a href="#" class="btn btn-primary">Running</a>
+              <button class="btn btn-primary align-center activity" value="Running" type="button" 
+                data-toggle="modal" data-target="#exampleModal">
+                Running
+              </button>
             </div>
           </div>
         </div>
         <div class="row ml-5 mb-3" style="width: 90%;">
           <div class="card col-3 ml-4" style="width: 18rem;">
             <h5 class="card-title">Pick up Soccer Games</h5>
-            <img src="stylesheets/images/soccer.jpeg" class="card-img-top" alt="...">
+            <img src="stylesheets/images/soccer.jpeg" class="card-img-top" alt="soccer">
             <div class="card-body">
               <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
             content.</p> -->
-              <a href="#" class="btn btn-primary">Soccer</a>
+              <button class="btn btn-primary align-center activity" value="Soccer" type="button" 
+                data-toggle="modal" data-target="#exampleModal">
+                Soccer
+              </button>
             </div>
           </div>
           <div class="card col-3 ml-4" style="width: 18rem;">
             <h5 class="card-title">Pick up Basketball Games</h5>
-            <img src="stylesheets/images/basketball.jpeg" class="card-img-top" alt="...">
+            <img src="stylesheets/images/basketball.jpeg" class="card-img-top" alt="basketball">
             <div class="card-body">
               <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
             content.</p> -->
-              <a href="#" class="btn btn-primary">Basketball</a>
+              <button class="btn btn-primary align-center activity" value="Basketball" type="button" 
+                data-toggle="modal" data-target="#exampleModal">
+                Basketball
+              </button>
             </div>
           </div>
           <div class="card col-3 ml-4" style="width: 18rem;">
             <h5 class="card-title">On Road or Off Road Biking</h5>
-            <img src="stylesheets/images/bike2.jpeg" class="card-img-top" alt="...">
+            <img src="stylesheets/images/bike2.jpeg" class="card-img-top" alt="biking">
             <div class="card-body">
               <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
             content.</p> -->
-              <a href="#" class="btn btn-primary">Biking</a>
+              <button class="btn btn-primary align-center activity" value="Biking" type="button" 
+                data-toggle="modal" data-target="#exampleModal">
+                Biking
+              </button>
             </div>
           </div>
-        </div>
+          <!-- <div class="row ml-5 mb-3 mt-3" style="width: 90%;"> -->
+            <div class="card col-3 ml-4 mt-3" style="width: 18rem;">
+              <h5 class="card-title">Pick up Football Games</h5>
+              <img src="stylesheets/images/football.jpeg" class="card-img-top" style="mb-3" alt="football">
+              <div class="card-body">
+                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p> -->
+                <a href="#" class="btn btn-primary align-center">Football</a>
+              </div>
+            </div>
+            <div class="card col-3 ml-4 mt-3" style="width: 18rem;">
+              <h5 class="card-title">Dodgeball</h5>
+              <img src="stylesheets/images/dball.jpeg" class="card-img-top" alt="dodgeball">
+              <div class="card-body">
+                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p> -->
+                <a href="#" class="btn btn-primary">Dodgeball</a>
+              </div>
+            </div>
+            <div class="card col-3 ml-4 mt-3" style="width: 18rem;">
+              <h5 class="card-title">Kickball</h5>
+              <img src="stylesheets/images/kickball.jpeg" class="card-img-top" alt="kickball">
+              <div class="card-body">
+                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p> -->
+                <a href="#" class="btn btn-primary">Kickball</a>
+              </div>
+            </div>
+          </div>
         <!-- map -->
         <div class="row mt-3 ml-5" style="width: 90%">
           <div class="col-1"></div>
           <div class="col-1 listing pad2">Listing</div>
           <div id="map" class=" col-6 map pad2" style="height: 300px;">Map</div>
-
         </div>
       </div>
     </div>
   </div>
   </div>
   </div>
+</div>
   <!--add on click later-->
   <!-- <button type="button" class="btn btn-primary">
   Interested<span class="badge badge-light">4</span>
  </button> -->
+  <!-- Button trigger modal -->
 
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <ul id="ol"></ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <!--map shows markers of all events, when user clicks a marker of the specific category events will display-->
-  <!-- <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCT5AesaYHIpAIlJ2oFzFoLsEYanCgaCt0&callback=initMap"
-    type="text/javascript"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/viewEvents.js"></script>
+  <script src="js/viewEvents.js"></script>
   <script src="./js/map.js"></script>
-</body>
+  <script>
+    $(document).ready(function () {
+      $(".activity").on("click", function () {
+        $("#exampleModalLabel").text(event.currentTarget.value);
+        console.log(event.currentTarget.value);
+      });
+    });
+    // var currentEventTarget = event.currentTarget.value
+
+    // var activity = []
+    // for (var i = 1; i <= 50; i++) {
+    //   activity.push("activity " + i)
+    // }
+
+    // $.each(activity, function (i, item) {
+    //   $("#ol").append("<li>" + item + "</li>");
+    // });
+  </script>
 </body>
 
 </html>
