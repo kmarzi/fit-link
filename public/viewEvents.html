@@ -50,11 +50,9 @@
             <div class="card-body">
               <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
             content.</p> -->
-              <button id="click-me" value="Yoga in the Park" type="button" class="btn btn-primary" data-toggle="modal"
-                data-target="#exampleModal">
+              <button class="activity" value="Yoga in the Park" type="button" class="btn btn-primary align-center" data-toggle="modal" data-target="#exampleModal">
                 Yoga
               </button>
-              <!-- <a href="#" class="btn btn-primary align-center">Yoga</a> -->
             </div>
           </div>
           <div class="card col-3 ml-4" style="width:18 rem">
@@ -63,7 +61,9 @@
             <div class="card-body">
               <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
             content.</p> -->
-              <a href="#" class="btn btn-primary">HIIT</a>
+            <button class="activity" value="HIIT" type="button" class="btn btn-primary align-center" data-toggle="modal" data-target="#exampleModal">
+              HIIT
+            </button>
             </div>
           </div>
           <div class="card col-3 ml-4" style="width: 18rem;">
@@ -72,7 +72,9 @@
             <div class="card-body">
               <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
             content.</p> -->
-              <a href="#" class="btn btn-primary">Running</a>
+            <button class="activity" value="Running" type="button" class="btn btn-primary align-center" data-toggle="modal" data-target="#exampleModal">
+              Running
+            </button>
             </div>
           </div>
         </div>
@@ -83,7 +85,9 @@
             <div class="card-body">
               <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
             content.</p> -->
-              <a href="#" class="btn btn-primary">Soccer</a>
+            <button class="activity" value="Soccer" type="button" class="btn btn-primary align-center" data-toggle="modal" data-target="#exampleModal">
+              Soccer
+            </button>
             </div>
           </div>
           <div class="card col-3 ml-4" style="width: 18rem;">
@@ -92,7 +96,9 @@
             <div class="card-body">
               <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
             content.</p> -->
-              <a href="#" class="btn btn-primary">Basketball</a>
+            <button class="activity" value="Basketball" type="button" class="btn btn-primary align-center" data-toggle="modal" data-target="#exampleModal">
+              Basketball
+            </button>
             </div>
           </div>
           <div class="card col-3 ml-4" style="width: 18rem;">
@@ -101,7 +107,9 @@
             <div class="card-body">
               <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
             content.</p> -->
-              <a href="#" class="btn btn-primary">Biking</a>
+            <button class="activity" value="Biking" type="button" class="btn btn-primary align-center" data-toggle="modal" data-target="#exampleModal">
+              Biking
+            </button>
             </div>
           </div>
         </div>
@@ -147,27 +155,29 @@
   <!-- <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCT5AesaYHIpAIlJ2oFzFoLsEYanCgaCt0&callback=initMap"
     type="text/javascript"></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/viewEvents.js"></script>
   <script src="./js/map.js"></script>
   <script>
-    // var currentEventTarget = event.currentTarget.value  
-    var activity = []
-    for (var i = 1; i <= 50; i++) {
-      activity.push("activity " + i)
-    }
     $(document).ready(function () {
-      $("#click-me").on("click", function () {
+      $(".activity").on("click", function () {
         $("#exampleModalLabel").text(event.currentTarget.value);
         console.log(event.currentTarget.value);
       });
     });
-    $.each(activity, function (i, item) {
-      $("#ol").append("<li>" + item + "</li>");
-    });
+    // var currentEventTarget = event.currentTarget.value  
+    
+    // var activity = []
+    // for (var i = 1; i <= 50; i++) {
+    //   activity.push("activity " + i)
+    // }
+
+    // $.each(activity, function (i, item) {
+    //   $("#ol").append("<li>" + item + "</li>");
+    // });
   </script>
 </body>
 
