@@ -4,14 +4,25 @@ $(document).ready(() => {
   $.get("/api/user_data").then(data => {
     $(".member-name").text(data.email);
   });
-var activityCategory = $(".activity")
+  const activityCategory = $(".activity");
 
- activityCategory.on("click", function() {
+  activityCategory.on("click", function() {
     $("#exampleModalLabel").text(event.currentTarget.value);
     console.log(event.currentTarget.id);
+    $("#ol").empty();
     $.get("/api/linkup/category/" + event.currentTarget.id, function(data) {
       console.log("LinkUps---->", data);
-      thisLinkUp = data;
+      displayLinkUp(data);
     });
   });
+
+  function displayLinkUp(data) {
+    console.log("for loop ====>",data);
+    for (let i = 0; i < data.length; i++) {
+      const displayEach = `${data[i].name} 
+      Where: ${data[i].street} ${data[i].city}, ${data[i].state} ${data[i].zipCode}`;
+      console.log(displayEach);
+      $("#ol").append("<li>" + displayEach + "</li");
+    }
+  }
 });
