@@ -53,16 +53,17 @@ module.exports = function(app) {
       res.json(results);
     });
 
-    app.get("/api/linkup/:category", function(req, res) {
+    app.get("/api/linkup/category/:category", function(req, res) {
       db.LinkUp.findAll({
         where: {
           category: req.params.category
         }
-      }).then(function(dbPost) {
-        res.json(dbPost);
+      }).then(function(results) {
+        res.json(results);
       });
     });
   });
+
   app.get("/logout", (req, res) => {
     req.logout();
     res.redirect("/");

@@ -8,7 +8,7 @@ $(document).ready(() => {
   const zipCodeInput = $("#Zip");
   const dateInput = $("#Date");
   const startTime = $("#Start");
-  const endTime = $("#End");
+  const linkUpDuration = $("#End");
 
   linkUpForm.on("submit", event => {
     event.preventDefault();
@@ -20,26 +20,27 @@ $(document).ready(() => {
       zipCode: zipCodeInput.val().trim(),
       linkUpDate: dateInput.val(),
       startTime: startTime.val(),
-      endTime: endTime.val(),
+      duration: linkUpDuration.val(),
       category: categoryInput.val()
     };
     addLinkUp(linkUpData);
   });
 
   function addLinkUp(data) {
-    console.log(data)
+    console.log(data);
     $.post("/api/linkup", data)
-    .then(() => {
-      window.location.replace("/viewEvents");
-      // If there's an error, handle it by throwing up a bootstrap alert
-    }).catch(error => {
-      console.log(error);
-    });
+      .then(() => {
+        window.location.replace("/viewEvents");
+        // If there's an error, handle it by throwing up a bootstrap alert
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 
-//   function handleErr(err) {
-//     // $("#alert .msg").text(JSON.stringify(err.responseJSON))
-//     console.log(err.response);
-//     $("#alert").fadeIn(500);
-//   }
+  //   function handleErr(err) {
+  //     // $("#alert .msg").text(JSON.stringify(err.responseJSON))
+  //     console.log(err.response);
+  //     $("#alert").fadeIn(500);
+  //   }
 });

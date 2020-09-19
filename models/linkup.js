@@ -28,13 +28,13 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
-    endTime: {
+    duration: {
       type: DataTypes.STRING,
       allowNull: false
     },
     category: {
       type: DataTypes.STRING,
-      defaultValue: "Yoga"
+      allowNull: false
     },
     interestCount: {
       type: DataTypes.INTEGER
