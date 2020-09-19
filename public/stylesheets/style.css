@@ -14,13 +14,13 @@ form.login {
 }
 
 .loginPage {
-  background-image: url("https://www.biddingforgood.com/orgs/LEFauction/207100190/boot-camp.jpg");
+  /* background-image: url("https://www.biddingforgood.com/orgs/LEFauction/207100190/boot-camp.jpg");
   background-position:right;
   background-repeat: no-repeat;
-  background-size:  cover;
+  background-size:  cover; */
   /* background-color: #cccccc; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: white;
+  color: black
  }
 
  main {
