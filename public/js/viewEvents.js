@@ -1,4 +1,3 @@
-var linkUp;
 $(document).ready(() => {
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
@@ -13,7 +12,6 @@ $(document).ready(() => {
     $("#ol").empty();
     $.get("/api/linkup/category/" + event.currentTarget.id, function(data) {
       console.log("LinkUps---->", data);
-      // linkUp = data;
       displayLinkUp(data);
     });
   });

@@ -28,7 +28,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
-    endTime: {
+    duration: {
       type: DataTypes.STRING,
       allowNull: false
     },
