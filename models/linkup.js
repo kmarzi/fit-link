@@ -34,7 +34,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     category: {
       type: DataTypes.STRING,
-      defaultValue: "Yoga"
+      allowNull: false
     },
     interestCount: {
       type: DataTypes.INTEGER
