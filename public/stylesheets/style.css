@@ -14,13 +14,13 @@ form.login {
 }
 
 .loginPage {
-  background-image: url("https://www.biddingforgood.com/orgs/LEFauction/207100190/boot-camp.jpg");
+  /* background-image: url("https://www.biddingforgood.com/orgs/LEFauction/207100190/boot-camp.jpg");
   background-position:right;
   background-repeat: no-repeat;
-  background-size:  cover;
+  background-size:  cover; */
   /* background-color: #cccccc; */
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: white;
+  font-family:'Raleway', sans-serif;
+  color: black
  }
 
  main {
@@ -29,7 +29,7 @@ form.login {
   background-repeat: no-repeat;
   background-size:  cover;
   background-color: #cccccc;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: white;
  }
  #signupPage {
@@ -38,7 +38,7 @@ form.login {
   background-repeat: no-repeat;
   background-size:  cover;
   background-color: #cccccc;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: white;
  }
  #fitcolor{
