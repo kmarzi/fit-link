@@ -20,9 +20,19 @@ $(document).ready(() => {
     console.log("for loop ====>",data);
     for (let i = 0; i < data.length; i++) {
       const displayEach = `${data[i].name} 
-      Where: ${data[i].street} ${data[i].city}, ${data[i].state} ${data[i].zipCode}`;
+      Where: ${data[i].street} ${data[i].city}, ${data[i].state} ${data[i].zipCode}
+      When: Date Goes Here`;
       console.log(displayEach);
       $("#ol").append("<li>" + displayEach + "</li");
     }
   }
 });
+
+{/* <p id="evite" class="card-title" style="font-size: 20px"><b>Glow-ga in the Park</b><button type="button"
+                    class="btn btn-primary ml-5">
+                    Interested<span class="badge badge-light ml-2">4</span>
+                  </button></p>
+                <p><b>Where: </b>Freedom Park: 1908 East Blvd. Charlotte, NC 28203
+                <p><b>When: </b>Thursday, September 24th, 2020 at 7pm </p>
+                <p class="card-text"><b>What: </b>Glow in the dark yoga in the park.
+                </p> */}
