@@ -9,7 +9,7 @@ $(document).ready(() => {
     $.get("/api/linkup/category/" + event.currentTarget.id, function (data) {
       // console.log("LinkUps---->", data);
       displayLinkUp(data);
-      const interestBtn = $("#interest");
+      const interestBtn = $(".interest");
       interestBtn.on("click", function () {
         console.log("hey");
       });
@@ -23,7 +23,7 @@ $(document).ready(() => {
       const displayEach = `
       <p id="evite" class="card-title" style="font-size: 20px">
         <b>${data[i].name}</b>
-        <button type="button" id="interest" class="btn btn-primary ml-5">
+        <button type="button" class="btn btn-primary ml-5 interest">
                         Interested
                         <span class="badge badge-light ml-2">${data[i].interestCount}</span>
                       </button></p>
