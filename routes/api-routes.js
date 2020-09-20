@@ -52,15 +52,25 @@ module.exports = function(app) {
     db.LinkUp.findAll({}).then(function(results) {
       res.json(results);
     });
+  });
 
-    app.get("/api/linkup/category/:category", function(req, res) {
-      db.LinkUp.findAll({
-        where: {
-          category: req.params.category
-        }
-      }).then(function(results) {
-        res.json(results);
-      });
+  app.get("/api/linkup/category/:category", function(req, res) {
+    db.LinkUp.findAll({
+      where: {
+        category: req.params.category
+      }
+    }).then(function(results) {
+      res.json(results);
+    });
+  });
+
+  app.get("/api/linkup/UserId", function(req, res) {
+    db.LinkUp.findAll({
+      where: {
+        category: req.params.category
+      }
+    }).then(function(results) {
+      res.json(results);
     });
   });
 
