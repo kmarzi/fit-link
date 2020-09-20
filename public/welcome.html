@@ -79,6 +79,10 @@
                     ></label>
                 </div>
               </div>
+              <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Error:</span>Invalid email or password. Try again or sign up.<p><span class="msg"></span>
+                </div>
               <div class="modal-footer d-flex justify-content-center">
                 <button type="submit" class="btn btn-fit">Login</button>
               </div>
@@ -110,6 +114,10 @@
               <label data-error="wrong" data-success="right" for="orangeForm-pass"></label>
             </div>
           </div>
+          <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span>Email already in use. Please use a unique email.<p><span class="msg"></span>
+            </div>
           <div class="modal-footer d-flex justify-content-center">
             <button type="submit" class="btn btn-fit">Sign up</button>
           </div>

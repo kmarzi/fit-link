@@ -29,8 +29,11 @@ $(document).ready(() => {
         window.location.replace("/viewEvents");
         // If there's an error, log the error
       })
-      .catch(err => {
-        console.log(err);
-      });
+      .catch(handleLoginErr);
+  }
+  function handleLoginErr(err) {
+    // $("#alert .msg").text(JSON.stringify(err.responseJSON))
+    console.log(err.response);
+    $("#alert").fadeIn(500);
   }
 });

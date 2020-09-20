@@ -21,7 +21,7 @@
           <div class="sidebar">
             <a href="/viewEvents"><h2 class="ml-3">fit<b>Link</b></h2></a>
             <ul class="text-left">
-              <li><a href="#"><i class="far fa-address-book"></i> Profile</a></li>
+              <li><a href="#" id="myProfile" data-toggle="modal" data-target="#profileModal"><i class="far fa-address-book"></i> Profile</a></li>
               <li><a href="#"><i class="far fa-calendar-plus"></i> +LinkUp</a></li>
             </ul>
             <div class="logout">
@@ -32,7 +32,7 @@
           </div>
         </div>
       </div>
-      <div class="col-1"></div>
+      <div class="col-2"></div>
       <!--category dropdown box-->
       <div class="col-8 mt-3 ml-3">
         <div class="container">
@@ -134,21 +134,46 @@
               </div>
             </div>
             <div class="form-row">
-            <div class="form-group col-md-2">
+            <div class="form-group col-md-3">
                 <label for="exampleFormControlTextarea1">Date</label>
                 <input class="form-control" type="date" id="Date" placeholder="Date">
               </div>
-              <div class="form-group col-md-2">
+              <div class="form-group col-md-3">
                 <label for="exampleFormControlTextarea1">Start Time</label>
                 <input class="form-control" type="time" id="Start" placeholder="06:00">
               </div>
-              <div class="form-group col-md-2">
+              <div class="form-group col-md-3">
                 <label for="exampleFormControlTextarea1">Duration</label>
                 <input class="form-control" type="number" id="End" placeholder="Minutes">
               </div>
             </div>
             <button type="submit" class="btn btn-primary col-md-12">Post LinkUp</button>
           </form>
+              <!--profile modal -->
+    <div class="row">
+      <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2>Hi <span class="member-name"></span></h2>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                    <button type="button" class="btn btn-primary btn-xsm">Edit</button>
+                    <button type="button" class="btn btn-danger btn-xsm">Delete</button>
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     </div>
   </div>
 </body>
