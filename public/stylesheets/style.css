@@ -120,5 +120,8 @@ body {
  .card{
    min-width: 175px;
  }
+ .events{
+  text-align: center;
+ }
 
 
