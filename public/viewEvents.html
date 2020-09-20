@@ -29,7 +29,7 @@
     <div class="col-1">
       <div class="wrapper">
         <div class="sidebar">
-          <h2 class="ml-3">fit<b>Link</b></h2>
+          <a href="/viewEvents"><h2 class="ml-3">fit<b>Link</b></h2></a>
           <ul class="text-left">
             <li><a href="#"><i class="far fa-address-book"></i> Profile</a></li>
             <li><a href="/linkup"><i class="far fa-calendar-plus"></i> +LinkUp</a></li>
@@ -62,7 +62,7 @@
             content.</p> -->
               <button id="Yoga" class="btn btn-primary align-center activity" value="Yoga in the Park" type="button"
                 data-toggle="modal" data-target="#exampleModal">
-                Yoga
+                VIEW LINKUPS
               </button>
             </div>
           </div>
@@ -74,7 +74,7 @@
             content.</p> -->
               <button id="HIIT" class="btn btn-primary align-center activity" value="HIIT" type="button"
                 data-toggle="modal" data-target="#exampleModal">
-                HIIT
+                VIEW LINKUPS
               </button>
             </div>
           </div>
@@ -84,9 +84,9 @@
             <div class="card-body">
               <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
             content.</p> -->
-              <button id="Biking" class="btn btn-primary align-center activity" value="Running" type="button"
+              <button id="Running" class="btn btn-primary align-center activity" value="Running" type="button"
                 data-toggle="modal" data-target="#exampleModal">
-                Running
+                VIEW LINKUPS
               </button>
             </div>
           </div>
@@ -98,9 +98,9 @@
             <div class="card-body">
               <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
             content.</p> -->
-              <button class="btn btn-primary align-center activity" value="Soccer" type="button" data-toggle="modal"
+              <button id="Soccer" class="btn btn-primary align-center activity" value="Soccer" type="button" data-toggle="modal"
                 data-target="#exampleModal">
-                Soccer
+                VIEW LINKUPS
               </button>
             </div>
           </div>
@@ -110,9 +110,9 @@
             <div class="card-body">
               <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
             content.</p> -->
-              <button class="btn btn-primary align-center activity" value="Basketball" type="button" data-toggle="modal"
+              <button id="Basketball" class="btn btn-primary align-center activity" value="Basketball" type="button" data-toggle="modal"
                 data-target="#exampleModal">
-                Basketball
+                VIEW LINKUPS
               </button>
             </div>
           </div>
@@ -122,9 +122,9 @@
             <div class="card-body">
               <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
             content.</p> -->
-              <button class="btn btn-primary align-center activity" value="Biking" type="button" data-toggle="modal"
+              <button id="Biking" class="btn btn-primary align-center activity" value="Biking" type="button" data-toggle="modal"
                 data-target="#exampleModal">
-                Biking
+                VIEW LINKUPS
               </button>
             </div>
           </div>
@@ -135,7 +135,10 @@
             <div class="card-body">
               <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p> -->
-              <a href="#" class="btn btn-primary align-center">Football</a>
+              <button id="Football" class="btn btn-primary align-center activity" value="Football" type="button" data-toggle="modal"
+                data-target="#exampleModal">
+                VIEW LINKUPS
+              </button>
             </div>
           </div>
           <div class="card col-3 ml-4 mt-3" style="width: 18rem;">
@@ -144,7 +147,10 @@
             <div class="card-body">
               <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p> -->
-              <a href="#" class="btn btn-primary">Dodgeball</a>
+              <button id="Dodgeball" class="btn btn-primary align-center activity" value="Dodgeball" type="button" data-toggle="modal"
+                data-target="#exampleModal">
+                VIEW LINKUPS
+              </button>
             </div>
           </div>
           <div class="card col-3 ml-4 mt-3" style="width: 18rem;">
@@ -153,33 +159,28 @@
             <div class="card-body">
               <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p> -->
-              <a href="#" class="btn btn-primary">Kickball</a>
+              <button id="Kickball" class="btn btn-primary align-center activity" value="Kickball" type="button" data-toggle="modal"
+              data-target="#exampleModal">
+              VIEW LINKUPS
+            </button>
             </div>
           </div>
         </div>
         <!-- map -->
         <div class="row mt-3 ml-5" style="width: 90%">
           <div class="col-1"></div>
-          <div class="col-1 listing pad2">Listing</div>
+          <div class="col-1 listing pad2"></div>
           <div id="map" class=" col-6 map pad2" style="height: 300px;">Map</div>
         </div>
       </div>
-      <!-- map -->
-      <div class="row mt-3 ml-5" style="width: 90%">
-        <div class="col-1"></div>
-        <div class="col-1 listing pad2"></div>
-        <div id="map" class=" col-6 map pad2" style="height: 300px;">Map</div>
-      </div>
-    </div>
-
-
+  
     <!-- Modal -->
     <div class="row">
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <h5 class="modal-title" id="linkUpModal"></h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -187,15 +188,7 @@
             <div class="modal-body">
               <!-- <ul id="ol"></ul> -->
               <!-- <div class="card w-50"> -->
-              <div style="text-align: left; font-family: Arial, Helvetica, sans-serif;">
-                <p id="evite" class="card-title" style="font-size: 20px"><b>Glow-ga in the Park</b><button type="button"
-                    class="btn btn-primary ml-5">
-                    Interested<span class="badge badge-light ml-2">4</span>
-                  </button></p>
-                <p><b>Where: </b>Freedom Park: 1908 East Blvd. Charlotte, NC 28203
-                <p><b>When: </b>Thursday, September 24th, 2020 at 7pm </p>
-                <p class="card-text"><b>What: </b>Glow in the dark yoga in the park.
-                </p>
+              <div id= "ol" style="text-align: left; font-family: Arial, Helvetica, sans-serif;">
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -9,6 +9,7 @@ $(document).ready(() => {
   const dateInput = $("#Date");
   const startTime = $("#Start");
   const linkUpDuration = $("#End");
+  const linkUpDescription = $("#description");
 
   linkUpForm.on("submit", event => {
     event.preventDefault();

@@ -50,6 +50,7 @@ form.login {
 
 .welcome {
   background-image: url("https://images.unsplash.com/photo-1571103189706-cd54b23e81f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80");
+  /* background-image: url("https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"); */
   background-position:right;
   background-repeat: no-repeat;
   background-size:  cover;
@@ -72,9 +73,9 @@ body {
   background-color: 1d4d4f;
  }
 
- #viewPage {
-   background-color: 1d4d4f;
- }
+ /* #viewPage {
+   background-color: #1d4d4f;
+ } */
 
  .evite {
    text-align: left;
@@ -121,4 +122,12 @@ body {
    min-width: 175px;
  }
 
-
+.tint {
+  z-index: -1;
+height: 100%;
+width: 100%;
+position: absolute;
+top: 0px;
+left: 0px;
+background: rgba(0, 0, 0, .1);    
+}
