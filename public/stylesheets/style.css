@@ -121,6 +121,9 @@ body {
  .card{
    min-width: 175px;
  }
+ .events{
+  text-align: center;
+ }
 
 .tint {
   z-index: -1;
