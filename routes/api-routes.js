@@ -67,7 +67,7 @@ module.exports = function(app) {
   app.get("/api/linkup/UserId", function(req, res) {
     db.LinkUp.findAll({
       where: {
-        category: req.params.category
+        category: req.params.id
       }
     }).then(function(results) {
       res.json(results);
