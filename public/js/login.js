@@ -3,7 +3,6 @@ $(document).ready(() => {
   const loginForm = $("form.login");
   const emailInput = $("#loginEmail");
   const passwordInput = $("#loginPassword");
-
   // When the form is submitted, we validate there's an email and password entered
   loginForm.on("submit", event => {
     event.preventDefault();
@@ -11,7 +10,6 @@ $(document).ready(() => {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim()
     };
-
     if (!userData.email || !userData.password) {
       return;
     }
@@ -21,7 +19,6 @@ $(document).ready(() => {
     emailInput.val("");
     passwordInput.val("");
   });
-
   // loginUser does a post to our "api/login" route and if successful, redirects us the the view events page
   function loginUser(email, password) {
     $.post("/api/login", {
