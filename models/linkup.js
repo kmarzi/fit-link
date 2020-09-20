@@ -4,6 +4,10 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
+    linkUpDesc: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     street: {
       type: DataTypes.STRING,
       allowNull: false
