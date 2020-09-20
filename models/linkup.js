@@ -37,7 +37,8 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     interestCount: {
-      type: DataTypes.INTEGER
+      type: DataTypes.INTEGER,
+      defaultValue: 1
     }
   });
 

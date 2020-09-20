@@ -80,6 +80,7 @@ module.exports = function(app) {
     }
   });
 };
+
 // app.get("/api/linkup/:id", function(req, res) {
 //   db.LinkUp.findOne({
 //     where: {
