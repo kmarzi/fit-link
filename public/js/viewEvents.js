@@ -19,11 +19,6 @@ $(document).ready(() => {
   function displayLinkUp(data) {
     console.log("for loop ====>", data);
     for (let i = 0; i < data.length; i++) {
-<<<<<<< HEAD
-      const displayEach = `${data[i].name} 
-      Where: ${data[i].street} ${data[i].city}, ${data[i].state} ${data[i].zipCode}
-      When: Date Goes Here`;
-=======
       const displayEach = `
       <p id="evite" class="card-title" style="font-size: 20px">
         <b>${data[i].name}</b>
@@ -37,7 +32,6 @@ $(document).ready(() => {
                     </p>
                     <hr>
                     `;
->>>>>>> acb6ed54d88ddc8dc4cef07b45012953b8f9ad2e
       console.log(displayEach);
       $("#ol").append(displayEach);
     }
