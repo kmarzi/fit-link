@@ -10,7 +10,7 @@ $(document).ready(() => {
       // console.log("LinkUps---->", data);
       displayLinkUp(data);
       const interestBtn = $(".interest");
-      interestBtn.on("click", function () {
+      interestBtn.on("click", function() {
         console.log("hey");
       });
     });

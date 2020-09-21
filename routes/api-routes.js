@@ -2,7 +2,7 @@
 const db = require("../models");
 const passport = require("../config/passport");
 
-module.exports = function(app) {
+module.exports = function (app) {
   app.post("/api/login", passport.authenticate("local"), (req, res) => {
     res.json({
       email: req.user.email,
@@ -49,18 +49,18 @@ module.exports = function(app) {
       });
   });
 
-  app.get("/api/linkup/all", function(req, res) {
-    db.LinkUp.findAll({}).then(function(results) {
+  app.get("/api/linkup/all", function (req, res) {
+    db.LinkUp.findAll({}).then(function (results) {
       res.json(results);
     });
   });
 
-  app.get("/api/linkup/category/:category", function(req, res) {
+  app.get("/api/linkup/category/:category", function (req, res) {
     db.LinkUp.findAll({
       where: {
         category: req.params.category
       }
-    }).then(function(results) {
+    }).then(function (results) {
       res.json(results);
     });
   });
@@ -70,7 +70,7 @@ module.exports = function(app) {
       where: {
         UserId: req.params.UserId
       }
-    }).then(function(results) {
+    }).then(function (results) {
       res.json(results);
     });
   });
