@@ -26,13 +26,14 @@ module.exports = function(app) {
   app.post("/api/linkup", (req, res) => {
     const {
       name,
+      linkUpDesc,
       street,
       city,
       state,
       zipCode,
       linkUpDate,
       startTime,
-      endTime,
+      duration,
       category
     } = req.body;
     req.body.UserId = req.user.id;
