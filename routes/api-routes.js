@@ -64,11 +64,7 @@ module.exports = function (app) {
     });
   });
 
-<<<<<<< HEAD
-  app.get("/api/linkup/UserId", function (req, res) {
-=======
   app.get("/api/linkup/UserId/:UserId", function(req, res) {
->>>>>>> 2d20873a4b9bc34dd541fe4a5c0bad360bd57f9b
     db.LinkUp.findAll({
       where: {
         UserId: req.params.UserId
