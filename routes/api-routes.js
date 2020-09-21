@@ -26,7 +26,7 @@ module.exports = function (app) {
   app.post("/api/linkup", (req, res) => {
     const {
       name,
-      description,
+      linkUpDesc,
       street,
       city,
       state,
