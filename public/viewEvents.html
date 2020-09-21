@@ -31,7 +31,7 @@
         <div class="sidebar">
           <a href="/viewEvents"><h2 class="ml-3">fit<b>Link</b></h2></a>
           <ul class="text-left">
-            <li><a href="#"><i class="far fa-address-book"></i> Profile</a></li>
+            <li><a href="#" id="myProfile" data-toggle="modal" data-target="#profileModal"><i class="far fa-address-book"></i> Profile</a></li>
             <li><a href="/linkup"><i class="far fa-calendar-plus"></i> +LinkUp</a></li>
           </ul>
           <div class="logout">
@@ -46,46 +46,45 @@
     <div class="col-2"></div>
     <!--add events to page and add interested button under each event-->
     <div class="col-8">
-      <div class="container">
-        <div class="row">
+      <div class="container events">
+        <!-- <div class="row">
           <div class="col-9 ml-5">
-            <h1>Welcome, <span class="member-name"></span></h1>
+            <h2>Hi <span class="member-name"></span></h2>
           </div>
-        </div>
+          <div>
+          </div>
+        </div> -->
         <!-- activities -->
-        <div class="row ml-5 mb-3" style="width: 90%;">
+        <div class="row ml-5 mb-3 mt-3" style="width: 90%;">
           <div class="card col-3 ml-4" style="width: 18rem;">
-            <h5 class="card-title">Yoga in the Park</h5><br>
+            <h5 class="card-title">Yoga</h5>
             <img src="stylesheets/images/yoga.jpeg" class="card-img-top" style="mb-3" alt="yoga">
             <div class="card-body">
-              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p> -->
+              
               <button id="Yoga" class="btn btn-primary align-center activity" value="Yoga in the Park" type="button"
-                data-toggle="modal" data-target="#exampleModal">
+                data-toggle="modal" data-target="#eventModal">
                 VIEW LINKUPS
               </button>
             </div>
           </div>
           <div class="card col-3 ml-4" style="width:18 rem">
-            <h5 class="card-title">HIIT with or without Equipment</h5>
+            <h5 class="card-title">HIIT</h5>
             <img src="stylesheets/images/weight.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
-              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p> -->
+              
               <button id="HIIT" class="btn btn-primary align-center activity" value="HIIT" type="button"
-                data-toggle="modal" data-target="#exampleModal">
+                data-toggle="modal" data-target="#eventModal">
                 VIEW LINKUPS
               </button>
             </div>
           </div>
           <div class="card col-3 ml-4" style="width: 18rem;">
-            <h5 class="card-title">Trail, Road or Marathon Runs</h5>
+            <h5 class="card-title">Running</h5>
             <img src="stylesheets/images/run.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
-              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p> -->
+              
               <button id="Running" class="btn btn-primary align-center activity" value="Running" type="button"
-                data-toggle="modal" data-target="#exampleModal">
+                data-toggle="modal" data-target="#eventModal">
                 VIEW LINKUPS
               </button>
             </div>
@@ -93,74 +92,65 @@
         </div>
         <div class="row ml-5 mb-3" style="width: 90%;">
           <div class="card col-3 ml-4" style="width: 18rem;">
-            <h5 class="card-title">Pick up Soccer Games</h5>
+            <h5 class="card-title">Soccer</h5>
             <img src="stylesheets/images/soccer.jpeg" class="card-img-top" alt="soccer">
             <div class="card-body">
-              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p> -->
+              
               <button id="Soccer" class="btn btn-primary align-center activity" value="Soccer" type="button" data-toggle="modal"
-                data-target="#exampleModal">
+                data-target="#eventModal">
                 VIEW LINKUPS
               </button>
             </div>
           </div>
           <div class="card col-3 ml-4" style="width: 18rem;">
-            <h5 class="card-title">Pick up Basketball Games</h5>
+            <h5 class="card-title">Basketball</h5>
             <img src="stylesheets/images/basketball.jpeg" class="card-img-top" alt="basketball">
             <div class="card-body">
-              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p> -->
+              
               <button id="Basketball" class="btn btn-primary align-center activity" value="Basketball" type="button" data-toggle="modal"
-                data-target="#exampleModal">
+                data-target="#eventModal">
                 VIEW LINKUPS
               </button>
             </div>
           </div>
           <div class="card col-3 ml-4" style="width: 18rem;">
-            <h5 class="card-title">On Road or Off Road Biking</h5>
+            <h5 class="card-title">Biking</h5>
             <img src="stylesheets/images/bike2.jpeg" class="card-img-top" alt="biking">
             <div class="card-body">
-              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p> -->
+              
               <button id="Biking" class="btn btn-primary align-center activity" value="Biking" type="button" data-toggle="modal"
-                data-target="#exampleModal">
+                data-target="#eventModal">
                 VIEW LINKUPS
               </button>
             </div>
           </div>
           <!-- <div class="row ml-5 mb-3 mt-3" style="width: 90%;"> -->
           <div class="card col-3 ml-4 mt-3" style="width: 18rem;">
-            <h5 class="card-title">Pick up Football Games</h5>
+            <h5 class="card-title">Football</h5>
             <img src="stylesheets/images/football.jpeg" class="card-img-top" style="mb-3" alt="football">
             <div class="card-body">
-              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p> -->
               <button id="Football" class="btn btn-primary align-center activity" value="Football" type="button" data-toggle="modal"
-                data-target="#exampleModal">
+                data-target="#eventModal">
                 VIEW LINKUPS
               </button>
             </div>
           </div>
           <div class="card col-3 ml-4 mt-3" style="width: 18rem;">
-            <h5 class="card-title">Dodgeball</h5><br>
+            <h5 class="card-title">Dodgeball</h5>
             <img src="stylesheets/images/dball.jpeg" class="card-img-top" alt="dodgeball">
             <div class="card-body">
-              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p> -->
               <button id="Dodgeball" class="btn btn-primary align-center activity" value="Dodgeball" type="button" data-toggle="modal"
-                data-target="#exampleModal">
+                data-target="#eventModal">
                 VIEW LINKUPS
               </button>
             </div>
           </div>
           <div class="card col-3 ml-4 mt-3" style="width: 18rem;">
-            <h5 class="card-title">Kickball</h5><br>
+            <h5 class="card-title">Kickball</h5>
             <img src="stylesheets/images/kickball.jpeg" class="card-img-top" alt="kickball">
             <div class="card-body">
-              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p> -->
               <button id="Kickball" class="btn btn-primary align-center activity" value="Kickball" type="button" data-toggle="modal"
-              data-target="#exampleModal">
+              data-target="#eventModal">
               VIEW LINKUPS
             </button>
             </div>
@@ -176,7 +166,7 @@
   
     <!-- Modal -->
     <div class="row">
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
@@ -186,8 +176,6 @@
               </button>
             </div>
             <div class="modal-body">
-              <!-- <ul id="ol"></ul> -->
-              <!-- <div class="card w-50"> -->
               <div id= "ol" style="text-align: left; font-family: Arial, Helvetica, sans-serif;">
               </div>
               <div class="modal-footer">
@@ -200,9 +188,35 @@
     </div>
   </div>
 
+    <!--profile modal -->
+    <div class="row">
+      <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2>Hi <span class="member-name"></span></h2>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body pro">
+               
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
   <!--map shows markers of all events, when user clicks a marker of the specific category events will display-->
   <script src="js/viewEvents.js"></script>
+  <script src="js/profile.js"></script>
   <script src="./js/map.js"></script>
+  <script src="./js/profile.js"></script>
 </body>
 
 </html>
