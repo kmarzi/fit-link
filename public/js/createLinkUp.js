@@ -3,7 +3,7 @@ $(document).ready(() => {
   const categoryInput = $("#category");
   const linkName = $("#LinkName");
   const addressInput = $("#Addy");
-  const cityInput = $("#City");
+  const cityInput = $("#inputCity");
   const stateInput = $("#stateInput");
   const zipCodeInput = $("#Zip");
   const dateInput = $("#Date");
@@ -15,7 +15,7 @@ $(document).ready(() => {
     event.preventDefault();
     const linkUpData = {
       name: linkName.val().trim(),
-      description: linkUpDescription.val().trim(),
+      linkUpDesc: linkUpDescription.val().trim(),
       street: addressInput.val().trim(),
       city: cityInput.val(),
       state: stateInput.val(),
