@@ -15,8 +15,9 @@ $(document).ready(() => {
     event.preventDefault();
     const linkUpData = {
       name: linkName.val().trim(),
+      description: linkUpDescription.val().trim(),
       street: addressInput.val().trim(),
-      city: cityInput.val().trim(),
+      city: cityInput.val(),
       state: stateInput.val(),
       zipCode: zipCodeInput.val().trim(),
       linkUpDate: dateInput.val(),
