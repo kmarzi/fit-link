@@ -52,15 +52,25 @@ module.exports = function(app) {
     db.LinkUp.findAll({}).then(function(results) {
       res.json(results);
     });
+  });
 
-    app.get("/api/linkup/category/:category", function(req, res) {
-      db.LinkUp.findAll({
-        where: {
-          category: req.params.category
-        }
-      }).then(function(results) {
-        res.json(results);
-      });
+  app.get("/api/linkup/category/:category", function(req, res) {
+    db.LinkUp.findAll({
+      where: {
+        category: req.params.category
+      }
+    }).then(function(results) {
+      res.json(results);
+    });
+  });
+
+  app.get("/api/linkup/UserId/:UserId", function(req, res) {
+    db.LinkUp.findAll({
+      where: {
+        UserId: req.params.UserId
+      }
+    }).then(function(results) {
+      res.json(results);
     });
   });
 
@@ -78,5 +88,25 @@ module.exports = function(app) {
         id: req.user.id
       });
     }
+  });
+
+  app.delete("/api/linkup/:id", function(req, res) {
+    db.LinkUp.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(results) {
+      res.json(results);
+    });
+  });
+
+  app.put("/api/linkup", function(req, res) {
+    db.LinkUp.update(req.body, {
+      where: {
+        id: req.body.id
+      }
+    }).then(function(results) {
+      res.json(results);
+    });
   });
 };

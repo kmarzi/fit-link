@@ -9,23 +9,25 @@ module.exports = function(app) {
     // If the user already has an account send them to the members page
     if (req.user) {
       res.redirect("/viewEvents");
+      console.log(req);
     }
     res.sendFile(path.join(__dirname, "../public/welcome.html"));
   });
-  app.get("/signup", (req, res) => {
-    // If the user already has an account send them to the members page
-    if (req.user) {
-      res.redirect("/viewEvents");
-    }
-    res.sendFile(path.join(__dirname, "../public/signup.html"));
-  });
-  app.get("/login", (req, res) => {
-    // If the user already has an account send them to the members page
-    if (req.user) {
-      res.redirect("/viewEvents");
-    }
-    res.sendFile(path.join(__dirname, "../public/login.html"));
-  });
+  // app.get("/signup", (req, res) => {
+  //   // If the user already has an account send them to the members page
+  //   if (req.user) {
+  //     res.redirect("/viewEvents");
+  //   }
+  //   res.sendFile(path.join(__dirname, "../public/signup.html"));
+  // });
+  // app.get("/login", (req, res) => {
+  //   // If the user already has an account send them to the members page
+  //   if (req.user) {
+  //     res.redirect("/viewEvents");
+  //     console.log(req);
+  //   }
+  //   res.sendFile(path.join(__dirname, "../public/login.html"));
+  // });
 
   app.get("/linkup", (req, res) => {
     // If the user already has an account send them to the members page

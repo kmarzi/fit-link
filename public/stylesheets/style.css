@@ -50,6 +50,7 @@ form.login {
 
 .welcome {
   background-image: url("https://images.unsplash.com/photo-1571103189706-cd54b23e81f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80");
+  /* background-image: url("https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"); */
   background-position:right;
   background-repeat: no-repeat;
   background-size:  cover;
@@ -72,10 +73,6 @@ body {
   background-color: 1d4d4f;
  }
 
- #viewPage {
-   background-color: 1d4d4f;
- }
-
  .evite {
    text-align: left;
    font-family: Arial, Helvetica, sans-serif;
@@ -84,10 +81,12 @@ body {
  .wrapper .sidebar{
    position: fixed;
    width: 15%;
-   min-width: 100px;
+   min-width: 120px;
+   margin-right: 15px;
    height: 100%;
    background: #385a7c;
    padding: 30px 0;
+   font-size: 36px;
  }
 
  .wrapper .sidebar ul li{
@@ -98,7 +97,7 @@ body {
  }
  .wrapper .sidebar h2{
   color: #f97171;
-  font-size: 36px;
+  font-size: 2.2rem;
  }
 
  .wrapper .sidebar .far{
@@ -120,5 +119,16 @@ body {
  .card{
    min-width: 175px;
  }
+ .events{
+  text-align: center;
+ }
 
-
+.tint {
+  z-index: -1;
+height: 100%;
+width: 100%;
+position: absolute;
+top: 0px;
+left: 0px;
+background: rgba(0, 0, 0, .1);    
+}

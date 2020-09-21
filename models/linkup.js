@@ -4,6 +4,10 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
+    linkUpDesc: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     street: {
       type: DataTypes.STRING,
       allowNull: false
@@ -37,7 +41,8 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     interestCount: {
-      type: DataTypes.INTEGER
+      type: DataTypes.INTEGER,
+      defaultValue: 1
     }
   });
 
