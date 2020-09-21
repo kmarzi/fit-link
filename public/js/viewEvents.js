@@ -16,7 +16,6 @@ $(document).ready(() => {
     });
   });
   function displayLinkUp(data) {
-    // console.log("for loop ====>", data);
     for (let i = 0; i < data.length; i++) {
       // console.log(convertTime(data[i].startTime));
       const eventTime = convertTime(data[i].startTime);

@@ -64,10 +64,14 @@ module.exports = function (app) {
     });
   });
 
+<<<<<<< HEAD
   app.get("/api/linkup/UserId", function (req, res) {
+=======
+  app.get("/api/linkup/UserId/:UserId", function(req, res) {
+>>>>>>> 2d20873a4b9bc34dd541fe4a5c0bad360bd57f9b
     db.LinkUp.findAll({
       where: {
-        category: req.params.id
+        UserId: req.params.UserId
       }
     }).then(function (results) {
       res.json(results);
@@ -89,36 +93,24 @@ module.exports = function (app) {
       });
     }
   });
+
+  app.delete("/api/linkup/:id", function(req, res) {
+    db.LinkUp.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(results) {
+      res.json(results);
+    });
+  });
+
+  app.put("/api/linkup", function(req, res) {
+    db.LinkUp.update(req.body, {
+      where: {
+        id: req.body.id
+      }
+    }).then(function(results) {
+      res.json(results);
+    });
+  });
 };
-
-// app.get("/api/linkup/:id", function(req, res) {
-//   db.LinkUp.findOne({
-//     where: {
-//       id: req.params.id
-//     }
-//   }).then(function(results) {
-//     res.json(results);
-//   });
-// });
-
-// app.delete("/api/linkup/:id", function (req, res) {
-//   db.LinkUp.destroy({
-//     where: {
-//       id: req.params.id
-//     }
-//   }).then(function (dbPost) {
-//     res.json(dbPost);
-//   });
-// });
-
-// app.put("/api/linkup/:id", function (req, res) {
-//   db.LinkUp.update(
-//     req.body,
-//     {
-//       where: {
-//         id: req.body.id
-//       }
-//     }).then(function (dbPost) {
-//       res.json(dbPost);
-//     });
-// });
