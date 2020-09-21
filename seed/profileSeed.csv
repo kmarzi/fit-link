@@ -1,0 +1,5 @@
+id,firstName,lastName,email,password,activity,createdAt,updatedAt
+1,NULL,NULL,komplexnupe@gmail.com,$2a$10$WCLRczN7VZubU6YAWTW.aeOn0aZB/vcmFEakeS.xZJa6Qw9ygSzQq,NULL,"2020-09-20 03:34:28","2020-09-20 03:34:28"
+3,NULL,NULL,k.L.marziali@gmail.com,$2a$10$ncjCzzOgZOjLUhQ2Tkq2eedFL44B3vPO/Af/4c3rvh/fij.SHAlaC,NULL,"2020-09-21 13:48:43","2020-09-21 13:48:43"
+4,NULL,NULL,TyshiaGray@gmail.com,$2a$10$VKYlqsZ.g6szXcxdvEfeHOSeZLRWbTnO5/c.uEgNmy1cUgILNBjgq,NULL,"2020-09-21 13:49:46","2020-09-21 13:49:46"
+5,NULL,NULL,nryder7@gmail.com,$2a$10$VsOLsEgKCSTe85XJymXz0OVqHn9usZ1dt7KYf5.0UVOgezqVfm8XC,NULL,"2020-09-21 13:52:47","2020-09-21 13:52:47"
