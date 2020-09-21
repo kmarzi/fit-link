@@ -9,3 +9,10 @@ $(document).ready(() => {
     });
   });
 });
+
+$("#edit").on("click", function() {
+  console.log("hello1");
+});
+$("#delete").on("click", function() {
+  console.log("hello2");
+});
