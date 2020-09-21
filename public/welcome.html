@@ -24,29 +24,34 @@
 <body>
   <div class="welcome">
     <div class="container" id="jumbotron">
-      <div class="jumbotron jumbotron-fluid rounded" style="height: 250px;">
+      <div class="jumbotron jumbotron-fluid rounded" >
         <h1 class="display-4 text-center" style="color:black; font-family: 'Raleway', sans-serif">Welcome to <span
             id="fitcolor">fit<b>Link</b></span></h1>
         <hr class="my-4">
-        <p class="lead text-center" style="color:black">fitLink is the social app that allows you to post,
-          create and attend outdoor fitness activities. This pandemic has kept many indoors, fitLink
-          aims to change that by bringing you outdoors and providing a sense of community.</p>
+        <h2 class="lead text-center" style="color:black">The social app that allows you to post,
+          create and attend outdoor fitness activities. This pandemic has kept many indoors, fitLink aims to change that by bringing you outdoors and proviidng a sense of community.</h2>
       </div>
     </div>
     <br>
     <div class="container">
       <div class="row">
-        <div class="card col-3 ml-4" class="card align-center" style="width:16rem;">
-          <img class="mt-3" src="stylesheets/images/p7.jpeg" width="250" height="200" alt="bikes">
+        <div class="card col-3 ml-4" class="card align-center" >
+          <img class="mt-3 mh-80 mw-100" src="stylesheets/images/p7.jpeg" alt="bikes">
           <div class="card-body">
             <h5 class="card-title" style="color:black"><b>Member Perks</b></h5>
             <h6 class="card-subtitle mb-2 text-center"></h6>
             <p class="card-text" style="color:black">Our members can view all
               the events in the area as well as create and organize their events.</p>
-            <button class="btn btn-danger ml-1 card-link" data-toggle="modal" data-target="#modalRegisterForm"
+              <div class="row text-center">
+                <!-- <div class="col-2"></div> -->
+                <button class="btn btn-danger ml-1 card-link col-8" data-toggle="modal" data-target="#modalLoginForm"
+                  id="logins">Login</button>
+                </div>  
+          <div class="row text-center">
+            <br>
+            <button class="btn btn-danger ml-1 card-link col-8" data-toggle="modal" data-target="#modalRegisterForm"
               id="signups">Sign Up</button>
-            <button class="btn btn-danger ml-1 card-link" data-toggle="modal" data-target="#modalLoginForm"
-              id="logins">Login</button>
+          </div>
             <!-- <button class="btn btn-danger ml-1 card-link" id="login">Login</button> -->
             <!-- <button class="loginBtn loginBtn--google" id="google-btn">Login with Google</button> -->
           </div>
